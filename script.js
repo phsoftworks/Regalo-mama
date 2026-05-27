@@ -3,7 +3,7 @@ function verificar() {
   const valor = document.getElementById("clave").value.toLowerCase();
 
   // 🔐 CONTRASEÑA (PUEDES CAMBIARLA AQUÍ)
-  const contraseña = "el día que nací";
+  const contraseña = "9/8/2012";
 
   if (valor === contraseña) {
 
@@ -16,7 +16,7 @@ function verificar() {
 
   } else {
     document.getElementById("error").innerText =
-      "Mmm... piensa en un momento muy especial ❤️";
+      "Mmm... piensa en un momento muy especial de tu vida ❤️";
   }
 }
 
