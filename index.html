@@ -24,24 +24,28 @@
 
     <h1 class="titulo">Para mamá ❤️</h1>
 
+    <!-- CARTA -->
     <div class="carta">
-      <p>
-        Te quiero mucho ❤️<br><br>
-        Lo siento por enfadarme a veces contigo.<br><br>
-        Espero que pases un muy buen día<br><br>
-        y que te gusten nuestros regalos 😘
-      </p>
+      <p id="typed"></p>
     </div>
 
-    <div class="mensaje">Eres la mejor mamá del mundo 🌍</div>
-    <div class="mensaje">Gracias por todo 💖</div>
-    <div class="mensaje">Siempre contigo ❤️</div>
+    <!-- MENSAJES -->
+    <div class="mensaje-box">
+      <p id="mensaje">Pulsa para ver un mensaje ❤️</p>
+      <button onclick="siguienteMensaje()">Siguiente ❤️</button>
+    </div>
+
+    <!-- FINAL -->
+    <div id="final" class="final oculto">
+      <h2>Feliz cumpleaños mamá ❤️</h2>
+      <p>Te quiero muchísimo 😘</p>
+    </div>
 
   </div>
 
-  <!-- MÚSICA -->
+  <!-- AUDIO -->
   <audio id="musica" loop>
-    <source src="lovely-by-alex-productions.mp3" type="audio/mpeg">
+    <source src="musica.mp3" type="audio/mpeg">
   </audio>
 
   <!-- CONFETI -->
