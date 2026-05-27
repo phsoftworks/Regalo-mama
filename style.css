@@ -3,8 +3,10 @@ body {
   font-family: Arial;
   background: #fff0f5;
   text-align: center;
+  overflow-x: hidden;
 }
 
+/* portada */
 .portada {
   height: 100vh;
   display: flex;
@@ -21,7 +23,7 @@ button {
   border: none;
   background: #ff4d6d;
   color: white;
-  border-radius: 10px;
+  border-radius: 12px;
   font-size: 1rem;
   cursor: pointer;
 }
@@ -30,8 +32,13 @@ button:hover {
   background: #e63956;
 }
 
+/* contenido */
 .oculto {
   display: none;
+}
+
+.titulo {
+  margin-top: 40px;
 }
 
 .tarjeta {
@@ -40,9 +47,28 @@ button:hover {
   padding: 20px;
   width: 300px;
   border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-.final {
-  margin: 50px 0;
+/* corazones */
+.heart {
+  position: fixed;
+  top: -10px;
+  color: #ff4d6d;
+  font-size: 20px;
+  animation: caer linear forwards;
+}
+
+@keyframes caer {
+  to {
+    transform: translateY(110vh);
+  }
+}
+
+/* confeti */
+#confeti {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
 }
