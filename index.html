@@ -3,38 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Feliz Cumpleaños Mamá</title>
+  <title>Para mamá ❤️</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- corazones flotantes -->
-  <div class="hearts"></div>
+  <!-- BLOQUEO -->
+  <div id="bloqueo" class="bloqueo">
+    <h1>🎁 Desbloquea tu regalo</h1>
+    <p>Escribe: el día más feliz de tu vida ❤️</p>
 
-  <div class="portada">
-    <h1>Feliz cumpleaños mamá ❤️</h1>
-    <p>He hecho esto solo para ti</p>
+    <input id="clave" type="text" placeholder="Escribe aquí...">
+    <button onclick="verificar()">Entrar</button>
 
-    <button onclick="abrirRegalo()">Abrir sorpresa 🎁</button>
+    <p id="error"></p>
   </div>
 
+  <!-- CONTENIDO -->
   <div id="contenido" class="oculto">
 
-    <h2 class="titulo">Te quiero muchísimo ❤️</h2>
+    <h1 class="titulo">Para mamá ❤️</h1>
 
-    <div class="tarjeta">Gracias por todo lo que haces por mí 💖</div>
-    <div class="tarjeta">Eres mi persona favorita 🌍</div>
-    <div class="tarjeta">No hay nadie como tú 💕</div>
+    <div class="carta">
+      <p>
+        Te quiero mucho ❤️<br><br>
+        Lo siento por enfadarme a veces contigo.<br><br>
+        Espero que pases un muy buen día<br><br>
+        y que te gusten nuestros regalos 😘
+      </p>
+    </div>
+
+    <div class="mensaje">Eres la mejor mamá del mundo 🌍</div>
+    <div class="mensaje">Gracias por todo 💖</div>
+    <div class="mensaje">Siempre contigo ❤️</div>
 
   </div>
 
-  <!-- confeti canvas -->
-  <canvas id="confeti"></canvas>
-
-  <!-- música -->
+  <!-- MÚSICA -->
   <audio id="musica" loop>
     <source src="musica.mp3" type="audio/mpeg">
   </audio>
+
+  <!-- CONFETI -->
+  <canvas id="confeti"></canvas>
 
   <script src="script.js"></script>
 </body>
