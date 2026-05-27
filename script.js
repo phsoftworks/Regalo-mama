@@ -1,65 +1,59 @@
-// abrir regalo
-function abrirRegalo() {
-  document.getElementById("contenido").classList.remove("oculto");
+function verificar() {
 
-  document.getElementById("musica").play();
+  const valor = document.getElementById("clave").value.toLowerCase();
 
-  lanzarConfeti();
+  // 🔐 CONTRASEÑA (PUEDES CAMBIARLA AQUÍ)
+  const contraseña = "el día que nací";
+
+  if (valor === contraseña) {
+
+    document.getElementById("bloqueo").style.display = "none";
+    document.getElementById("contenido").classList.remove("oculto");
+
+    document.getElementById("musica").play();
+
+    confeti();
+
+  } else {
+    document.getElementById("error").innerText =
+      "Mmm... piensa en un momento muy especial ❤️";
+  }
 }
 
-// corazones flotantes
-function crearCorazon() {
-  const heart = document.createElement("div");
-  heart.classList.add("heart");
-  heart.innerHTML = "❤️";
+/* confeti simple */
+function confeti() {
 
-  heart.style.left = Math.random() * 100 + "vw";
-  heart.style.animationDuration = (3 + Math.random() * 3) + "s";
-  heart.style.fontSize = (15 + Math.random() * 20) + "px";
-
-  document.body.appendChild(heart);
-
-  setTimeout(() => {
-    heart.remove();
-  }, 6000);
-}
-
-setInterval(crearCorazon, 300);
-
-// confeti simple
-function lanzarConfeti() {
   const canvas = document.getElementById("confeti");
   const ctx = canvas.getContext("2d");
 
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 
-  const pieces = [];
+  const piezas = [];
 
-  for (let i = 0; i < 150; i++) {
-    pieces.push({
+  for (let i = 0; i < 120; i++) {
+    piezas.push({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      r: Math.random() * 6 + 2,
-      d: Math.random() * 150
+      r: Math.random() * 5 + 2
     });
   }
 
-  function draw() {
+  function animar() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+
     ctx.fillStyle = "#ff4d6d";
 
-    pieces.forEach(p => {
+    piezas.forEach(p => {
       ctx.beginPath();
-      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2, true);
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
       ctx.fill();
-
-      p.y += Math.random() * 5;
+      p.y += 2;
       if (p.y > canvas.height) p.y = 0;
     });
 
-    requestAnimationFrame(draw);
+    requestAnimationFrame(animar);
   }
 
-  draw();
+  animar();
 }
