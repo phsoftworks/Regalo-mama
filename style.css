@@ -6,30 +6,33 @@ body {
   overflow-x: hidden;
 }
 
-/* portada */
-.portada {
+/* bloqueo */
+.bloqueo {
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-h1 {
-  font-size: 3rem;
+input {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin: 10px;
+  text-align: center;
 }
 
 button {
-  padding: 15px 25px;
+  padding: 12px 20px;
   border: none;
   background: #ff4d6d;
   color: white;
-  border-radius: 12px;
-  font-size: 1rem;
+  border-radius: 10px;
   cursor: pointer;
 }
 
-button:hover {
-  background: #e63956;
+#error {
+  color: red;
 }
 
 /* contenido */
@@ -41,28 +44,23 @@ button:hover {
   margin-top: 40px;
 }
 
-.tarjeta {
+/* carta */
+.carta {
   background: white;
-  margin: 20px auto;
-  padding: 20px;
-  width: 300px;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  width: 80%;
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  font-size: 1.2rem;
+  line-height: 1.6;
 }
 
-/* corazones */
-.heart {
-  position: fixed;
-  top: -10px;
-  color: #ff4d6d;
-  font-size: 20px;
-  animation: caer linear forwards;
-}
-
-@keyframes caer {
-  to {
-    transform: translateY(110vh);
-  }
+/* mensajes */
+.mensaje {
+  margin: 20px;
+  color: #444;
 }
 
 /* confeti */
