@@ -12,6 +12,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  animation: fadeIn 1.5s ease;
 }
 
 input {
@@ -41,7 +42,7 @@ button {
 }
 
 .titulo {
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 /* carta */
@@ -49,8 +50,8 @@ button {
   background: white;
   width: 80%;
   max-width: 500px;
-  margin: 40px auto;
-  padding: 30px;
+  margin: 30px auto;
+  padding: 25px;
   border-radius: 20px;
   box-shadow: 0 5px 20px rgba(0,0,0,0.1);
   font-size: 1.2rem;
@@ -58,9 +59,18 @@ button {
 }
 
 /* mensajes */
-.mensaje {
+.mensaje-box {
+  margin-top: 30px;
+}
+
+#mensaje {
+  font-size: 1.2rem;
   margin: 20px;
-  color: #444;
+}
+
+/* final */
+.final {
+  margin-top: 40px;
 }
 
 /* confeti */
@@ -69,4 +79,10 @@ button {
   top: 0;
   left: 0;
   pointer-events: none;
+}
+
+/* fade */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
